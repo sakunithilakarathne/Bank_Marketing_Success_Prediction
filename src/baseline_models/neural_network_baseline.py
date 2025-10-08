@@ -60,7 +60,7 @@ def baseline_neural_network():
             optimizer.step()
         wandb.log({"epoch": epoch+1, "loss": loss.item()})
 
-    model.load_state_dict(torch.load(ANN_BASELINE))
+    torch.save(model.state_dict(), ANN_BASELINE)
     # Evaluate
     model.eval()
     with torch.no_grad():
