@@ -34,3 +34,5 @@ LOGISTIC_BASELINE = os.path.join(BASELINE_MODELS, "logistic_model.pkl")
 RANDOM_FOREST_BASLEINE = os.path.join(BASELINE_MODELS, "random_forrest_model.pkl")
 
 XGBOOST_BASELINE = os.path.join(BASELINE_MODELS, "xgboost_model.pkl")
+
+ANN_BASELINE = os.path.join(BASELINE_MODELS, "neural_network_baseline.pt")
