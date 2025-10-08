@@ -31,3 +31,5 @@ X_TEST_LE = os.path.join(ARTIFACTS_DIR, "X_test_le.parquet")
 BASELINE_MODELS = os.path.join(ARTIFACTS_DIR, "baseline_models")
 LOGISTIC_BASELINE = os.path.join(BASELINE_MODELS, "logistic_model.pkl")
 
+RANDOM_FOREST_BASLEINE = os.path.join(BASELINE_MODELS, "random_forrest_model.pkl")
+
