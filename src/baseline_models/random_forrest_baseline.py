@@ -1,5 +1,5 @@
 import wandb
-from src.utils.data_loader import load_data
+from src.utils.data_loader import load_data_le
 from src.utils.metrics import evaluate_and_log
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -10,7 +10,7 @@ from config import (RANDOM_FOREST_BASLEINE)
 def baseline_random_forrest():
     run = wandb.init(project="Bank_Marketing_Classifier", job_type="baseline", name="random_forest_baseline")
 
-    X, y = load_data(run, 'scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
+    X, y = load_data_le(run, 'scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
     X_train, X_val, y_train, y_val = train_test_split(X, y, stratify=y, test_size=0.2, random_state=42)
 
     params = {"n_estimators": 100, "random_state": 42, "class_weight": "balanced", "n_jobs": -1}

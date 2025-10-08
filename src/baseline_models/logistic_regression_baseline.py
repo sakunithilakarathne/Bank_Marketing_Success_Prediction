@@ -1,5 +1,5 @@
 import wandb
-from src.utils.data_loader import load_data
+from src.utils.data_loader import load_data_ohe
 from src.utils.metrics import evaluate_and_log
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
@@ -12,7 +12,7 @@ def baseline_logistic_regression_model():
     run = wandb.init(project="Bank_Marketing_Classifier", job_type="baseline", name="logistic_regression_baseline")
 
     # Load data
-    X, y = load_data(run, 'scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
+    X, y = load_data_ohe(run, 'scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
     X_train, X_val, y_train, y_val = train_test_split(X, y, stratify=y, test_size=0.2, random_state=42)
 
     # Model
