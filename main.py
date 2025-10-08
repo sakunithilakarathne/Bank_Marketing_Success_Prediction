@@ -1,10 +1,11 @@
 import pandas as pd
 
 from src.preprocessing.data_preprocessing import preprocessing_pipeling
+from src.baseline_models.logistic_regression_baseline import baseline_logistic_regression_model
 
 
 def main():
-    preprocessing_pipeling()
+    baseline_logistic_regression_model()
 
 
 

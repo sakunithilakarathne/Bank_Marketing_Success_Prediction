@@ -25,3 +25,9 @@ X_TEST_OHE = os.path.join(ARTIFACTS_DIR, "X_test_ohe.parquet")
 
 X_TRAIN_LE = os.path.join(ARTIFACTS_DIR, "X_train_le.parquet")
 X_TEST_LE = os.path.join(ARTIFACTS_DIR, "X_test_le.parquet")
+
+
+# Baseline Paths
+BASELINE_MODELS = os.path.join(ARTIFACTS_DIR, "baseline_models")
+LOGISTIC_BASELINE = os.path.join(BASELINE_MODELS, "logistic_model.pkl")
+
