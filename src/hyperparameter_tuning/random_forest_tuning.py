@@ -11,7 +11,7 @@ def random_forest_tuning():
 
     run = wandb.init(project="Bank_Marketing_Classifier", job_type="hp_tuning", name="random_forest_tuning")
 
-    X, y = load_data_le('scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
+    X, y = load_data_le(run, 'scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
 
     param_grid = {
         "n_estimators": [100, 200, 500],

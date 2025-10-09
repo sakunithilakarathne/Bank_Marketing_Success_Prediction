@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader, TensorDataset
 from sklearn.model_selection import StratifiedKFold
 from sklearn.preprocessing import StandardScaler
 import numpy as np
-from utils.data_loader import load_data_ohe
+from src.utils.data_loader import load_data_ohe
 from sklearn.metrics import average_precision_score
 import joblib
 from config import NEURAL_NET_PARAMETERS
@@ -15,7 +15,7 @@ def neural_network_tuning():
 
     run = wandb.init(project="Bank_Marketing_Classifier", job_type="hp_tuning", name="nn_tuning")
 
-    X, y = load_data_ohe('scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
+    X, y = load_data_ohe(run, 'scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
 
     scaler = StandardScaler()
     X = scaler.fit_transform(X)

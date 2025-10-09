@@ -10,7 +10,7 @@ def logsitic_regression_tuning():
 
     run = wandb.init(project="Bank_Marketing_Classifier", job_type="hp_tuning", name="logreg_tuning")
 
-    X, y = load_data_ohe('scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
+    X, y = load_data_ohe(run, 'scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
 
     param_grid = {
         "C": [0.01, 0.1, 1, 10],

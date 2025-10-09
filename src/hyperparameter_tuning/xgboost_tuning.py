@@ -13,7 +13,7 @@ def xgboost_tuning():
 
     run = wandb.init(project="Bank_Marketing_Classifier", job_type="hp_tuning", name="xgboost_tuning")
 
-    X, y = load_data_le('scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
+    X, y = load_data_le(run, 'scsthilakarathne-nibm/Bank_Marketing_Classifier/bank_marketing_dataset:v2')
 
     scale_pos_weight = y.value_counts()[0] / y.value_counts()[1]
 
