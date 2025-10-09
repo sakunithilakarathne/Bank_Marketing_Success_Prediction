@@ -7,7 +7,7 @@ from sklearn.metrics import make_scorer, average_precision_score, f1_score, reca
 from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline
 import joblib
-from utils.data_loader import load_data_ohe
+from src.utils.data_loader import load_data_ohe
 
 
 

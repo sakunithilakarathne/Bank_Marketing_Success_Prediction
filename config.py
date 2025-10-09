@@ -50,3 +50,18 @@ LOGREG2_MODEL = os.path.join(ARTIFACTS_DIR, "best_logreg_model.pkl")
 RANDOM_FOREST_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_rf_params.pkl")
 XGBOOST_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_xgb_params.pkl")
 NEURAL_NET_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_nn_params.pkl")
+
+
+# Improved Models paths
+MODEL_IMPROVEMENT_DIR = os.path.join(ARTIFACTS_DIR, "model_improvement")
+X_TRAIN_STRAT_PATH = os.path.join(MODEL_IMPROVEMENT_DIR, "X_train_strat.parquet")
+X_TEST_STRAT_PATH = os.path.join(MODEL_IMPROVEMENT_DIR, "X_test_strat.parquet")
+
+Y_TRAIN_STRAT_PATH = os.path.join(MODEL_IMPROVEMENT_DIR, "y_train_strat.parquet")
+Y_TEST_STRAT_PATH = os.path.join(MODEL_IMPROVEMENT_DIR, "y_test_strat.parquet")
+
+X_TRAIN_LR_NN = os.path.join(MODEL_IMPROVEMENT_DIR, "X_train_lr_nn.parquet")
+X_TEST_LR_NN = os.path.join(MODEL_IMPROVEMENT_DIR, "X_test_lr_nn.parquet")
+
+X_TRAIN_RF_XG = os.path.join(MODEL_IMPROVEMENT_DIR, "X_train_rf_xg.parquet")
+X_TEST_RF_XG = os.path.join(MODEL_IMPROVEMENT_DIR, "X_test_rf_xg.parquet")

@@ -151,12 +151,12 @@ def preprocessing_pipeling():
 
     run = wandb.init(project="Bank_Marketing_Classifier", name="splitting_data")
 
-    # Get raw dataset
-    # raw_dataset = pd.read_csv(RAW_DATASET_PATH)
-    # cleaned_dataset = outlier_handling(raw_dataset)
-    # processed_dataset = feature_engineering(cleaned_dataset)
-    # final_dataset = drop_columns(processed_dataset)
-    # final_dataset.to_csv(PROCESSED_DATASET_PATH)
+    #Get raw dataset
+    raw_dataset = pd.read_csv(RAW_DATASET_PATH)
+    cleaned_dataset = outlier_handling(raw_dataset)
+    processed_dataset = feature_engineering(cleaned_dataset)
+    final_dataset = drop_columns(processed_dataset)
+    final_dataset.to_csv(PROCESSED_DATASET_PATH)
 
     final_dataset = pd.read_csv(PROCESSED_DATASET_PATH)
 
