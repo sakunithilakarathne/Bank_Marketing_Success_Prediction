@@ -45,6 +45,8 @@ IMBALANCE_ANN_BASELINE = os.path.join(CLASS_IMBALANCE_MODELS, "imbalance_neural_
 
 #Hyperparamter tuning
 LOGREG_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_logreg_params.pkl")
+LOGREG2_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_logreg_params_with_resampling.pkl")
+LOGREG2_MODEL = os.path.join(ARTIFACTS_DIR, "best_logreg_model.pkl")
 RANDOM_FOREST_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_rf_params.pkl")
 XGBOOST_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_xgb_params.pkl")
 NEURAL_NET_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_nn_params.pkl")
