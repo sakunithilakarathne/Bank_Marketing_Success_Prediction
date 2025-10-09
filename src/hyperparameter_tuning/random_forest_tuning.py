@@ -29,7 +29,7 @@ def random_forest_tuning():
     run.log({"best_params": grid.best_params_, "best_score": grid.best_score_})
     joblib.dump(grid.best_params_, RANDOM_FOREST_PARAMETERS)
 
-    model_artifact = wandb.Artifact("random_forest_model", type="hyperparamters", description="Random Forest HP")
+    model_artifact = wandb.Artifact("random_forest_parameters", type="hyperparamters", description="Random Forest HP")
     model_artifact.add_file(RANDOM_FOREST_PARAMETERS)
     run.log_artifact(model_artifact)
 

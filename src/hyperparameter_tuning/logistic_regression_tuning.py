@@ -28,7 +28,7 @@ def logsitic_regression_tuning():
     run.log({"best_params": grid.best_params_, "best_score": grid.best_score_})
     joblib.dump(grid.best_params_, LOGREG_PARAMETERS)
     
-    model_artifact = wandb.Artifact("logistic_regression_model", type="hyperparamters", description="Logistic Regression HP")
+    model_artifact = wandb.Artifact("logistic_regression_parameters", type="hyperparamters", description="Logistic Regression HP")
     model_artifact.add_file(LOGREG_PARAMETERS)
     run.log_artifact(model_artifact)
 

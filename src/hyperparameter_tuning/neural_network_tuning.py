@@ -86,7 +86,7 @@ def neural_network_tuning():
 
     wandb.log({"best_params": best_params, "best_score": best_score})
 
-    model_artifact = wandb.Artifact("ann_model", type="hyperparamters", description="Nueral Network HP")
+    model_artifact = wandb.Artifact("ann_parameters", type="hyperparamters", description="Nueral Network HP")
     model_artifact.add_file(NEURAL_NET_PARAMETERS)
     run.log_artifact(model_artifact)
     
