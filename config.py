@@ -37,7 +37,14 @@ ANN_BASELINE = os.path.join(BASELINE_MODELS, "neural_network_baseline.pt")
 
 # Class Imbalance Handled Model Paths
 CLASS_IMBALANCE_MODELS = os.path.join(ARTIFACTS_DIR, "class_imbalance_models")
-IMBALANCE_LOGISTIC_BASELINE = os.path.join(BASELINE_MODELS, "imbalance_logistic_model.pkl")
-IMBALANCE_RANDOM_FOREST_BASELINE = os.path.join(BASELINE_MODELS, "imbalance_random_forrest_model.pkl")
-IMBALANCE_XGBOOST_BASELINE = os.path.join(BASELINE_MODELS, "imbalance_xgboost_model.pkl")
-IMBALANCE_ANN_BASELINE = os.path.join(BASELINE_MODELS, "imbalance_neural_network.pt")
+IMBALANCE_LOGISTIC_BASELINE = os.path.join(CLASS_IMBALANCE_MODELS, "imbalance_logistic_model.pkl")
+IMBALANCE_RANDOM_FOREST_BASELINE = os.path.join(CLASS_IMBALANCE_MODELS, "imbalance_random_forrest_model.pkl")
+IMBALANCE_XGBOOST_BASELINE = os.path.join(CLASS_IMBALANCE_MODELS, "imbalance_xgboost_model.pkl")
+IMBALANCE_ANN_BASELINE = os.path.join(CLASS_IMBALANCE_MODELS, "imbalance_neural_network.pt")
+
+
+#Hyperparamter tuning
+LOGREG_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_logreg_params.pkl")
+RANDOM_FOREST_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_rf_params.pkl")
+XGBOOST_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_xgb_params.pkl")
+NEURAL_NET_PARAMETERS = os.path.join(ARTIFACTS_DIR, "best_nn_params.pkl")
