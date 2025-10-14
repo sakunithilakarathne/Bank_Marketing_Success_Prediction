@@ -100,6 +100,11 @@ def baseline_xgboost_model():
     }
     run.config.update(params)
 
+    if y_train.dtype == 'O':
+        y_train = y_train.map({'no': 0, 'yes': 1})
+    if y_val.dtype == 'O':
+        y_val = y_val.map({'no': 0, 'yes': 1})
+
     model = XGBClassifier(**params)
     model.fit(X_train, y_train)
 
@@ -130,6 +135,9 @@ def baseline_neural_network():
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_val = scaler.transform(X_val)
+
+    y_train = y_train.replace({'no': 0, 'yes': 1})
+    y_val = y_val.replace({'no': 0, 'yes': 1})
 
     # Convert to tensors
     X_train_t = torch.tensor(X_train, dtype=torch.float32)
