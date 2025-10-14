@@ -1,4 +1,5 @@
 import wandb
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import (
@@ -8,6 +9,10 @@ from sklearn.metrics import (
 
 def evaluate_and_log(model_name, y_true, y_pred, y_prob, class_labels):
     # ---- Classification report and metrics ----
+    if y_true.dtype == 'O':
+        y_true = y_true.map({'no': 0, 'yes': 1})
+        y_pred = pd.Series(y_pred).map({'no': 0, 'yes': 1}) if isinstance(y_pred[0], str) else y_pred
+
     report = classification_report(y_true, y_pred, target_names=class_labels, output_dict=True)
     roc_auc = roc_auc_score(y_true, y_prob)
     pr_auc = average_precision_score(y_true, y_prob)
